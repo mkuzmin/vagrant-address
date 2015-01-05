@@ -22,3 +22,5 @@ tmp
 *.o
 *.a
 mkmf.log
+Vagrantfile
+.vagrant/
