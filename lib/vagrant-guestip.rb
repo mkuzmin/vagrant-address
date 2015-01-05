@@ -1,7 +1,12 @@
-require "vagrant/guestip/version"
-
-module Vagrant
+module VagrantPlugins
   module GuestIP
-    # Your code goes here...
+    class Plugin < Vagrant.plugin(2)
+      name 'guestip'
+
+      command('ip', primary: false) do
+        require_relative 'command'
+        Command
+      end
+    end
   end
 end
