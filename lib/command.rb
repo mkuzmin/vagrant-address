@@ -7,7 +7,7 @@ module VagrantPlugins
 
       def execute
         with_target_vms(nil, {:single_target=>true}) do |machine|
-          puts machine.guest.capability(:read_ip_address)
+          @env.ui.info(machine.guest.capability(:read_ip_address))
         end
       end
     end
