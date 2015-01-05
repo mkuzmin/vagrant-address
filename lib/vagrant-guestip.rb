@@ -1,7 +1,7 @@
 require "vagrant/guestip/version"
 
 module Vagrant
-  module Guestip
+  module GuestIP
     # Your code goes here...
   end
 end
