@@ -4,7 +4,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ['Michael Kuzmin']
   spec.email         = ['mkuzmin@gmail.com']
   spec.summary       = 'Vagrant plugin for obtaining IP address of guest machine'
-  spec.homepage      = 'https://github.com/mkuzmin/vagrant-gusetip'
+  spec.homepage      = 'https://github.com/mkuzmin/vagrant-guestip'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split("\x0")
