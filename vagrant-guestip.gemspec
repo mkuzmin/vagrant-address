@@ -1,6 +1,6 @@
 Gem::Specification.new do |spec|
   spec.name          = 'vagrant-guestip'
-  spec.version       = '0.0.1'
+  spec.version       = '0.1'
   spec.authors       = ['Michael Kuzmin']
   spec.email         = ['mkuzmin@gmail.com']
   spec.summary       = 'Vagrant plugin for obtaining IP address of guest machine'
