@@ -3,7 +3,7 @@ module VagrantPlugins
     class Plugin < Vagrant.plugin(2)
       name 'guestip'
 
-      command('ip', primary: false) do
+      command('guestip', primary: false) do
         require_relative 'command'
         Command
       end
