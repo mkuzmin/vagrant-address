@@ -7,7 +7,7 @@ module VagrantPlugins
 
       def execute
         with_target_vms(nil, {:single_target=>true}) do |machine|
-          ip = machine.guest.capability(:read_ip_address)
+          ip = machine.provider.capability(:public_address)
           message = ENV['TEAMCITY_VERSION'] ? "##teamcity[setParameter name='env.VAGRANT_GUESTIP' value='#{ip}']" : ip
           @env.ui.info(message)
         end
