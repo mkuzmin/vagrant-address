@@ -5,5 +5,5 @@ group :development do
 end
 
 group :plugins do
-  gem 'vagrant-guestip', path: '.'
+  gem 'vagrant-address', path: '.'
 end

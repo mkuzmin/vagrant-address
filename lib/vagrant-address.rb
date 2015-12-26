@@ -1,9 +1,9 @@
 module VagrantPlugins
-  module GuestIP
+  module CommandAddress
     class Plugin < Vagrant.plugin(2)
-      name 'guestip'
+      name 'address'
 
-      command('guestip', primary: false) do
+      command('address', primary: false) do
         require_relative 'command'
         Command
       end
