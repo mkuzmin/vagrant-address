@@ -1,0 +1,7 @@
+en:
+  vagrant_address:
+    errors:
+      not_running: |-
+        A machine is not running
+      unknown: |-
+        The address is unknown. Refer to https://github.com/mkuzmin/vagrant-address/issues/5

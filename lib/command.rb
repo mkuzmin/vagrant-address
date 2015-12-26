@@ -16,6 +16,14 @@ module VagrantPlugins
 
         with_target_vms(argv, {:single_target=>true}) do |machine|
           ip = machine.provider.capability(:public_address)
+
+          if machine.state.id != :running
+            raise ::VagrantPlugins::CommandAddress::Errors::NotRunning
+          end
+          if ip == nil
+            raise ::VagrantPlugins::CommandAddress::Errors::Unknown
+          end
+
           message = ENV['TEAMCITY_VERSION'] ? "##teamcity[setParameter name='env.VAGRANT_ADDRESS' value='#{ip}']" : ip
           @env.ui.info(message)
         end
