@@ -1,10 +1,15 @@
+require "vagrant"
+
 module VagrantPlugins
   module CommandAddress
-    class Plugin < Vagrant.plugin(2)
-      name 'address'
+    class Plugin < Vagrant.plugin("2")
+      name "address"
+      description <<-DESC
+      The `address` command outputs a public IP address of a guest machine
+      DESC
 
-      command('address', primary: false) do
-        require_relative 'command'
+      command("address", primary: false) do
+        require_relative "command"
         Command
       end
     end
